@@ -62,10 +62,9 @@ $selection-color              : white;
 }
 
 // Font families.
-$font-family-chinese      : "PingFang SC", "Microsoft YaHei";
+// $font-family-japanese: "Noto Sans Japanese";
+$font-family-base: if(get_font_family('global'), get_font_family('global'), ""), -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
 
-$font-family-base         : $font-family-chinese, sans-serif;
-$font-family-base         : if(get_font_family('global'), (get_font_family('global'), $font-family-chinese, sans-serif), $font-family-base);
 
 $font-family-logo         : $font-family-base;
 $font-family-logo         : if(get_font_family('logo'), (get_font_family('logo'), $font-family-base), $font-family-logo);
@@ -76,8 +75,8 @@ $font-family-headings     : if(get_font_family('headings'), (get_font_family('he
 $font-family-posts        : $font-family-base;
 $font-family-posts        : if(get_font_family('posts'), (get_font_family('posts'), $font-family-base), $font-family-posts);
 
-$font-family-monospace    : consolas, Menlo, $font-family-chinese, monospace;
-$font-family-monospace    : if(get_font_family('codes'), (get_font_family('codes'), consolas, Menlo, $font-family-chinese, monospace), $font-family-monospace);
+$font-family-monospace    : consolas, Menlo, monospace;
+$font-family-monospace    : if(get_font_family('codes'), (get_font_family('codes'), consolas, Menlo, monospace), $font-family-monospace);
 
 $font-family-icons        : 'FontAwesome';
 
@@ -159,7 +158,7 @@ $btn-default-radius             : 0;
 $btn-default-bg                 : $black-deep;
 $btn-default-color              : white;
 $btn-default-font-size          : 14px;
-$btn-default-border-width       : 2px;
+$btn-default-border-width       : 1px;
 $btn-default-border-color       : $black-deep;
 $btn-default-hover-bg           : white;
 $btn-default-hover-color        : $black-deep;
